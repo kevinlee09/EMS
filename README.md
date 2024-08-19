@@ -24,7 +24,7 @@
 
 <br>
 <div>
-  <div style="display: inline-block; font-size: 4em;">
+  <div style="display: inline-block; ">
     <a target="_blank" href="https://arxiv.org/abs/2309.12787">
       <img src="https://img.shields.io/badge/arXiv-PDF-b31b1b.svg" alt="arXiv Paper"/>
     </a>
@@ -64,13 +64,18 @@ pip install --no-index --no-cache-dir pytorch3d -f https://dl.fbaipublicfiles.co
 pip install -r requirements.txt
 ```
 
+Build the Cython version of NMS for `3DDFA_V2`  in the `preprocess/external` directory:
+```
+cd preprocess/external/3DDFA_V2
+bash ./build.sh
+```
 Compile the `orient2d` cpp code (tested on `Ubuntu 20.04` with `gcc-9.4.0`). 
 
 Prior to building orient2d, ensure that you have installed the `fftw3` library.
 ```
 sudo apt-get install libfftw3-dev
 ```
-Then use CMake to build the project:
+Then use CMake to build `orient2d`:
 ```
 cd preprocess/orient2d
 mkdir build && cd build
@@ -84,6 +89,7 @@ Install mesh processing libraries from [MPI-IS/mesh](https://www.baidu.com).
 First, we need to prepare the input data, including the 3D head, eyebrow matting, and the orientation map.
 
 Download the assets from [Google Drive](https://drive.google.com/file/d/1AwNllTKWge3ttlZWHm5A9NW1SdsGzCRh/view?usp=share_link) and unzip them, then put the assets under the `preprocess` folder.
+
 ```
 bash scripts/preprocess.sh
 ```
