@@ -5,7 +5,7 @@
 <div>
     <a href=https://kevinlee09.github.io>Chenghong Li</a> <sup>1,2*</sup>&emsp;
     Leyang Jing<sup>2*</sup>&emsp;
-    <a href=https://paulyzheng.github.io/about>YuJian Zheng</a> <sup>1,2</sup>&emsp;
+    <a href=https://paulyzheng.github.io/about>Yujian Zheng</a> <sup>1,2</sup>&emsp;
     <a href=https://i.cs.hku.hk/~yzyu>Yizhou Yu</a> <sup>3&dagger;</sup>&emsp;
     <a href=https://gaplab.cuhk.edu.cn/pages/people>Xiaoguang Han</a> <sup>2,1&dagger;</sup></a>
 </div>
@@ -87,15 +87,15 @@ bash scripts/preprocess.sh
 ```
 
 ## 🚀 Run EMS
-Initially, you need to run the **`RootFinder`** algorithm to identify the root points, which serve as the starting locations for eyebrow growth.
+Initially, you need to run the `RootFinder` algorithm to identify the root points, which serve as the starting locations for eyebrow growth.
 ```
 bash scripts/test_root.sh
 ```
-Next, execute **`OriPredictor`** to predict the direction of eyebrow growth.  In this step, each hair fiber is extended 13 samples with a unit length of 0.014.
+Next, execute `OriPredictor` to predict the direction of eyebrow growth.  In this step, each hair fiber is extended 13 samples with a unit length of 0.014.
 ```
 bash scripts/test_orien.sh
 ```
-Finally, run **`FiberEnder`**  to determine the length of each eyebrow fiber.
+Finally, run `FiberEnder`  to determine the length of each eyebrow fiber.
 ```
 bash scripts/test_len.sh
 ``` 
