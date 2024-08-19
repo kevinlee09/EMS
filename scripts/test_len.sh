@@ -1,0 +1,1 @@
+python -m apps.FiberEnder  --test_data example_data --ckpt_path ./checkpoints/eyebrow_len/netG_epoch_100 --gpu_id 0

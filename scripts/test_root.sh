@@ -1,0 +1,1 @@
+python -m apps.RootFinder --test_data ./example_data --ckpt_path ./checkpoints/eyebrow_roots/roots_extract_best_model.pth --gpu_id 0

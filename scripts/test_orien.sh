@@ -1,0 +1,1 @@
+ python -m apps.OriPredictor --test_data example_data --ckpt_path ./checkpoints/eyebrow_orien/netG_epoch_100 --gpu_id 0
