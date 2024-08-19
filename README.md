@@ -3,11 +3,11 @@
 <h1>EMS: 3D Eyebrow Modeling from Single-View Images</h1>
 
 <div>
-    <a href=https://kevinlee09.github.io>Chenghong Li<sup>1,2*</sup>&emsp;</a> 
+    <a href=https://kevinlee09.github.io>Chenghong Li</a> <sup>1,2*</sup>&emsp;
     Leyang Jing<sup>2*</sup>&emsp;
-    <a href=https://paulyzheng.github.io/about>YuJian Zheng<sup>1,2</sup>&emsp;</a>
-    <a href=https://i.cs.hku.hk/~yzyu>Yizhou Yu<sup>3&dagger;</sup>&emsp;</a>
-    <a href=https://gaplab.cuhk.edu.cn/pages/people>Xiaoguang Han<sup>2,1&dagger;</sup></a>
+    <a href=https://paulyzheng.github.io/about>YuJian Zheng</a> <sup>1,2</sup>&emsp;
+    <a href=https://i.cs.hku.hk/~yzyu>Yizhou Yu</a> <sup>3&dagger;</sup>&emsp;
+    <a href=https://gaplab.cuhk.edu.cn/pages/people>Xiaoguang Han</a> <sup>2,1&dagger;</sup></a>
 </div>
 <div>
     FNii, CUHKSZ&emsp;
