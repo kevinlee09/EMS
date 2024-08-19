@@ -6,7 +6,6 @@ import argparse
 import numpy as np
 
 from ext_utils import io3d
-
 from ext_utils.transform import *
 from ext_utils.face_utils import *
 from ext_utils.matt_utils import *
