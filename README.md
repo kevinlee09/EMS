@@ -26,7 +26,7 @@
 <div style="margin-top: 10px;">
   <div style="display: inline-block;">
     <a target="_blank" href="https://arxiv.org/abs/2309.12787">
-      <img src="https://img.shields.io/badge/arXiv-2309.12787-b31b1b.svg" alt="arXiv Paper"/>
+      <img src="https://img.shields.io/badge/arXiv-PDF-b31b1b.svg" alt="arXiv Paper"/>
     </a>
       <a href="https://kevinlee09.github.io/research/EMS/" target='_blank'>
     <img src="https://img.shields.io/badge/Project-Page-Green">
@@ -78,7 +78,7 @@ cmake ..
 make -j8
 ``` 
 
-Install mesh processing libraries from [MPI-IS/mesh](https://www.baidu.com) .
+Install mesh processing libraries from [MPI-IS/mesh](https://www.baidu.com).
 
 ## 📦 Preprocess
 First, we need to prepare the input data, including the 3D head, eyebrow matting, and the orientation map.
