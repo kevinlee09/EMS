@@ -1,0 +1,55 @@
+# Refer to utils/config.py for definition and options.
+version = "DAM_Net"
+dist = false
+
+#v1 = no bg_aug
+#v1.1 = with bg_aug
+
+[model]
+batch_size = 4
+imagenet_pretrain = true
+imagenet_pretrain_path = "./pretrain/model_best_resnet34_En_nomixup.pth"
+    [model.arch]
+    encoder = "resnet_gca_encoder_29"
+    decoder = "res_gca_decoder_22"
+
+[train]
+total_step = 200000
+warmup_step = 5000
+val_step = 2000
+clip_grad = true
+G_lr = 4e-4
+# Uncomment to resume training
+#resume_checkpoint = "latest_model"
+#reset_lr = false
+use_da = true
+
+[data]
+train_fg = "data/train/image"
+train_alpha = "data/train/mask"
+train_bg = "data/coco_bg"
+pupil_bg = "data/coco_bg"
+real_image = "data/real"
+test_merged = "data/test/image"
+test_alpha = "data/test/mask"
+test_trimap = "data/test/trimap"
+
+workers = 0
+augmentation = true
+
+[log]
+tensorboard_step = 100
+tensorboard_image_step = 2000
+logging_step =  1
+logging_level = "INFO"
+checkpoint_step = 2000
+
+[test]
+merged = "/home/liyaoyi/dataset/Adobe/Combined_Dataset/Test_set/merged"
+alpha = "/home/liyaoyi/dataset/Adobe/Combined_Dataset/Test_set/alpha_copy"
+trimap = "/home/liyaoyi/dataset/Adobe/Combined_Dataset/Test_set/trimaps"
+scale = "origin"
+checkpoint = "gca_dist"
+fast_eval = true
+# Uncomment to save predicted alpha
+alpha_path = "prediction"
