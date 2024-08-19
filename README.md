@@ -89,7 +89,7 @@ bash scripts/preprocess.sh
 ```
 
 ## 🚀 Run EMS
-Initially, download the checkpoints from [Google Drive](https://drive.google.com/file/d/1odXiNpbU6UTnUyvOXuNAKkCEJWF307jP/view?usp=sharing) and place the extracted checkpoints in the `root` directory.
+Download the checkpoints from [Google Drive](https://drive.google.com/file/d/1odXiNpbU6UTnUyvOXuNAKkCEJWF307jP/view?usp=sharing) and place the extracted checkpoints in the `root` directory.
 
 Then you need to run the `RootFinder` algorithm to identify the root points, which serve as the starting locations for eyebrow growth.
 ```
