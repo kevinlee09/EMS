@@ -1,5 +1,5 @@
 input_data="../example_data/"
-gpu_id="1"
+gpu_id="0"
 
 cd preprocess
 python face_recon.py --input ${input_data}  --gpu_ids ${gpu_id}
