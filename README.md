@@ -40,7 +40,7 @@
 
 
 
-<div style="width: 80%; text-align: center; margin:auto;">
+<div style="width: 70%; text-align: center; margin:auto;">
     <img style="width:100%" src="figure/EMS_teaser.jpg"><br>
 </div>
 
@@ -64,7 +64,9 @@ pip install --no-index --no-cache-dir pytorch3d -f https://dl.fbaipublicfiles.co
 pip install -r requirements.txt
 ```
 
-Compile the `orient2d` cpp code which is test on `Ubuntu 20.04`, `gcc-9.4.0`. Prior to building orient2d, ensure that you have installed the `fftw3` library.
+Compile the `orient2d` cpp code which is test on `Ubuntu 20.04`, `gcc-9.4.0`. 
+
+Prior to building orient2d, ensure that you have installed the `fftw3` library.
 ```
 sudo apt-get install libfftw3-dev
 ```
@@ -89,7 +91,7 @@ Initially, you need to run the **`RootFinder`** algorithm to identify the root p
 ```
 bash scripts/test_root.sh
 ```
-Next, execute **`OriPredictor`** to predict the direction of eyebrow growth.  In this step, each hair fiber is extended `13` samples with a unit length of `0.014`.
+Next, execute **`OriPredictor`** to predict the direction of eyebrow growth.  In this step, each hair fiber is extended 13 samples with a unit length of 0.014.
 ```
 bash scripts/test_orien.sh
 ```
@@ -101,12 +103,12 @@ To get the blender particle system hair, you can run
 ```
 blender -b -P npy2blend.py -- --data_item revision_013
 ```
-📝 Note: We test our code on [blender-3.4.0](https://www.blender.org/download/releases/3-4/) and [blender-3.6.14](https://www.blender.org). However, it cannot run on versions above [blender-4.0](https://www.blender.org/download/releases/4-0/)
+📝 Note: We test our code on [blender-3.6.14](https://www.blender.org). However, it cannot run on versions above [blender-4.0](https://www.blender.org/download/releases/4-0/)
 
 
 If you obtain the blend file, you can render the eyebrow to achieve a result similar to the figure shown:
 
-<div style="width: 80%; text-align: center; margin:auto;">
+<div style="width: 70%; text-align: center; margin:auto;">
     <img style="width:100%" src="figure/EMS_wild.jpg"><br>
 </div>
 
