@@ -40,7 +40,7 @@
 
 
 
-<div style="width: 90%; text-align: center; margin:auto;">
+<div style="width: 80%; text-align: center; margin:auto;">
     <img style="width:100%" src="figure/EMS_teaser.jpg"><br>
 </div>
 
@@ -64,7 +64,7 @@ pip install --no-index --no-cache-dir pytorch3d -f https://dl.fbaipublicfiles.co
 pip install -r requirements.txt
 ```
 
-Compile the `orient2d` cpp code which is test on `Ubuntu 20.04`, `gcc-9.4.0`. Make sure you install the `fftw3` library.
+Compile the `orient2d` cpp code which is test on `Ubuntu 20.04`, `gcc-9.4.0`. Prior to building orient2d, ensure that you have installed the `fftw3` library.
 ```
 sudo apt-get install libfftw3-dev
 ```
@@ -106,7 +106,7 @@ blender -b -P npy2blend.py -- --data_item revision_013
 
 If you obtain the blend file, you can render the eyebrow to achieve a result similar to the figure shown:
 
-<div style="width: 90%; text-align: center; margin:auto;">
+<div style="width: 80%; text-align: center; margin:auto;">
     <img style="width:100%" src="figure/EMS_wild.jpg"><br>
 </div>
 
@@ -125,10 +125,9 @@ Our code is based on these wonderful repos, many thanks to all the authors for s
 * [HairStep](https://github.com/GAP-LAB-CUHK-SZ/HairStep)
 * [DAM-Net](https://github.com/Dancingmader/DAM-Net)
 * [3DDFA_V2](https://github.com/cleardusk/3DDFA_V2)
-* [face-parsing.PyTorch](https://github.com/zllrunning/face-parsing.PyTorch)
 * [Facescape](https://github.com/zhuhao-nju/facescape)
 * [Detailed3DFace](https://github.com/yanght321/Detailed3DFace)
-
+* [face-parsing.PyTorch](https://github.com/zllrunning/face-parsing.PyTorch)
 
 
 ## 📝 Citation
