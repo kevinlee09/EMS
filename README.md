@@ -64,7 +64,7 @@ pip install --no-index --no-cache-dir pytorch3d -f https://dl.fbaipublicfiles.co
 pip install -r requirements.txt
 ```
 
-Compile the `orient2d` cpp code which is test on `Ubuntu 20.04`, `gcc-9.4.0`. 
+Compile the `orient2d` cpp code (tested on `Ubuntu 20.04` with `gcc-9.4.0`). 
 
 Prior to building orient2d, ensure that you have installed the `fftw3` library.
 ```
