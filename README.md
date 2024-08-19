@@ -24,7 +24,7 @@
 
 <br>
 <div>
-  <div style="display: inline-block;">
+  <div style="display: inline-block; font-size: 4em;">
     <a target="_blank" href="https://arxiv.org/abs/2309.12787">
       <img src="https://img.shields.io/badge/arXiv-PDF-b31b1b.svg" alt="arXiv Paper"/>
     </a>
