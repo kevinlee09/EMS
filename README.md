@@ -82,12 +82,16 @@ Install mesh processing libraries from [MPI-IS/mesh](https://www.baidu.com).
 
 ## 📦 Preprocess
 First, we need to prepare the input data, including the 3D head, eyebrow matting, and the orientation map.
+
+Download the assets from [Google Drive](https://drive.google.com/file/d/1AwNllTKWge3ttlZWHm5A9NW1SdsGzCRh/view?usp=share_link) and unzip them, then put the assets under the `preprocess` folder.
 ```
 bash scripts/preprocess.sh
 ```
 
 ## 🚀 Run EMS
-Initially, you need to run the `RootFinder` algorithm to identify the root points, which serve as the starting locations for eyebrow growth.
+Initially, download the checkpoints from [Google Drive](https://drive.google.com/file/d/1odXiNpbU6UTnUyvOXuNAKkCEJWF307jP/view?usp=sharing) and place the extracted checkpoints in the `root` directory.
+
+Then you need to run the `RootFinder` algorithm to identify the root points, which serve as the starting locations for eyebrow growth.
 ```
 bash scripts/test_root.sh
 ```
