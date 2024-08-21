@@ -54,7 +54,7 @@ def perspective(points, calibrations, transforms=None):
     return xyz
 
 
-def perspective_KRT(img_mode, points, calibs):
+def perspective_KRT(img_mode, points, calibs, is_wild=False):
     '''
     Compute the orthogonal projections of 3D points into the image plane by given projection matrix
     :param points: [B, 3, N] Tensor of 3D points
@@ -63,15 +63,17 @@ def perspective_KRT(img_mode, points, calibs):
     :return: xyz: [B, 3, N] Tensor of xyz coordinates in the image plane
     '''
     if img_mode == 0:
-        H, W = 600, 1500
+        W = 1500
+        H = 600
         
     rot = calibs[:, :3, :3]
     trans = calibs[:, :3, 3:4]
-    # print(calibs.shape,points.shape)
     pts = torch.baddbmm(trans, rot, points)  # [B, 3, N]
-
-    xy = pts[:, :2, :]                      # For wild and revision image， commented by chenghong 2024-03-28
-    # xy = pts[:, :2, :] / pts[:, 2:3, :]   # For standard KRT projection matrix，e.g. Facescape, MultiFace, commented by chenghong 2024-03-28
+    
+    if is_wild == True:
+        xy = pts[:, :2, :]                      # For wild and revision image， commented by chenghong 2024-03-28
+    else:
+        xy = pts[:, :2, :] / pts[:, 2:3, :]   # tese use, For standard KRT projection matrix，e.g. Facescape, MultiFace, commented by chenghong 2024-03-28
 
     # Transfer to [-1, 1]
     xy[:, 0, :] = (2 * xy[:, 0, :] / (W-1)) - 1
