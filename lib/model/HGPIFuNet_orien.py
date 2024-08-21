@@ -104,7 +104,7 @@ class HGPIFuNet_orien(BasePIFuNet):
         # xyz = perspective_rev(points, calibs, self.opt.img_width, self.opt.img_height, self.opt.crop_bbox[0], self.opt.crop_bbox[1], self.opt.crop_bbox[2], self.opt.crop_bbox[3])
         # xyz = orthogonal_rev(points, calibs, self.opt.img_width, self.opt.img_height, self.opt.crop_bbox[0], self.opt.crop_bbox[1], self.opt.crop_bbox[2], self.opt.crop_bbox[3])
         # xyz = perspective_nocrop(points, calibs)  
-        xyz = perspective_KRT(self.opt.img_mode, points, calibs)   # For synthetic EBStore data 
+        xyz = perspective_KRT(self.opt.img_mode, points, calibs, self.opt.is_wild)   # For synthetic EBStore data 
 
         # print(xyz.shape)
         xy = xyz[:, :2, :]#/2.0

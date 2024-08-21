@@ -54,12 +54,13 @@ def perspective(points, calibrations, transforms=None):
     return xyz
 
 
-def perspective_KRT(img_mode, points, calibs, is_wild=False):
+def perspective_KRT(img_mode, points, calibs, is_wild):
     '''
     Compute the orthogonal projections of 3D points into the image plane by given projection matrix
     :param points: [B, 3, N] Tensor of 3D points
     :param calibrations: [B, 4, 4] Tensor of projection matrix
     :param transforms: [B, 2, 3] Tensor of image transform matrix
+    :param is_wild: whether use wild format camera
     :return: xyz: [B, 3, N] Tensor of xyz coordinates in the image plane
     '''
     if img_mode == 0:
