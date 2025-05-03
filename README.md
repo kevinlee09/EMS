@@ -127,7 +127,7 @@ The code is released under the Attribution-NonCommercial 4.0 International Licen
 
 Copyright (c) 2024
 
-For commercial use and license, please contact: hanxiaoguang@cuhk.edu.cn. 
+For commercial use and commercial license, please contact: hanxiaoguang@cuhk.edu.cn. 
 
 
 
